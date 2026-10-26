@@ -1,0 +1,3 @@
+-r requirements-gpu.txt
+vllm==0.21.0
+# Install a CUDA-compatible PyTorch build for the target system separately.

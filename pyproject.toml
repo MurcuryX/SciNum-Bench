@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scinumbench-basic-experiment"
+version = "0.1.0"
+description = "Core source code for the SciNumBench probe and archived baselines"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy==2.4.6",
+  "scipy==1.17.1",
+  "scikit-learn==1.9.0",
+  "joblib==1.5.3",
+  "threadpoolctl==3.6.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+gpu = [
+  "accelerate==1.13.0",
+  "huggingface-hub==1.17.0",
+  "transformers==5.9.0",
+]
+vllm = ["vllm==0.21.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+

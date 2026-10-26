@@ -1,0 +1,7 @@
+-r requirements.txt
+accelerate==1.13.0
+huggingface-hub==1.17.0
+transformers==5.9.0
+# Install the CUDA-compatible PyTorch 2.12.0 build separately.
+# The reported feature extraction used torch 2.12.0+cu130.
+
